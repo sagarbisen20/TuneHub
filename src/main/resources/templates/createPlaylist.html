@@ -1,20 +1,48 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Playlist</title>
+    <link rel="stylesheet" th:href="@{/css/createplaylist.css}">
+    <!-- Add the link to the icon library (Font Awesome in this case) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="addPlaylist" method="post">
+            <input type="text" name="name" /> <br>
+            <div th:each="songs:${songs}">
+                <input type="checkbox" th:name="songs" th:value="${songs.id}">
+                <label th:text="${songs.name}"></label>
+            </div>
+            <button class="btn">
+                <input type="submit" value="Add Playlist">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/createPlaylist.css}">
-
+<title>Create Playlist</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-	<form action="addPlaylist" method="post">
-	<input type="text" name="name" />
-	<br>
-	<div th:each="songs:${songs}">
-		<input type="checkbox" th:name="songs" th:value="${songs.id}">
-		<label th:text="${songs.name}"></label>
+	<div class="container">
+		<form action="addPlaylist" method="post">
+			<input type="text" name="name" /> <br>
+			<div th:each="songs:${songs}">
+				<input type="checkbox" th:name="songs" th:value="${songs.id}">
+				<label th:text="${songs.name}"></label>
+			</div>
+			<button class="btn"><input type="submit" value="Add PlayList"></button>
+		</form>
 	</div>
-	<input type="submit" value="Add PlayList">
-	</form>
 </body>
 </html>
+ -->

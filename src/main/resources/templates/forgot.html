@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Forgot</title>
+<link rel="stylesheet" th:href="@{/css/forgot.css}">
+</head>
+<body>
+	<div
+		class="container">
+		<h3 class="txt">Your Registered Email</h3>
+		<form action="" th:action="@{/send-otp}" method="post">
+			<input type="email" name="email" placeholder="Enter Your Email"
+				required> <br>
+			<button class="btn" type="submit">Send OTP</button>
+		</form>
+	</div>
+</body>
+</html>

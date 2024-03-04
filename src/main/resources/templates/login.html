@@ -1,4 +1,52 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" th:href="@{/index}">TuneHub</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/login}">Log-In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/register}">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <form action="validate" method="post">
+                <h1 id="hdn">TuneHub</h1>
+                <label class="lbl">Email:</label> 
+                <input type="email" name="email"> <br>
+                <label class="lbl">Password:</label> 
+                <input type="password" name="password">
+                <br><button> <a th:href="@{/forgot}">Forgot Password</a> </button>
+                <br><br>
+                <input type="submit" value="LOGIN" class="sub">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+            
+<!--
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -6,14 +54,18 @@
 <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 <body>
-<form action="validate" method="post">
-<label>Email:</label>
-<input type="email" name="email">
-<br><br>
-<label>Password:</label>
-<input type="password" name="password">
-<br><br>
-<input type="submit" value="LOGIN">
-</form>
+	<div class="container">
+		<form action="validate" method="post">
+			<h1 id="hdn">TuneHub</h1>
+			<label class="lbl">Email:</label> 
+			<input type="email" name="email"> <br>
+			<label class="lbl">Password:</label> 
+			<input type="password" name="password">
+			<br><button> <a th:href="@{/forgot}">Forgot Password</a> </button>
+			<br><br>
+			<input type="submit" value="LOGIN" class="sub">
+		</form>
+	</div>
 </body>
 </html>
+-->

@@ -1,8 +1,209 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>DisplaySongs</title>
+    <link rel="stylesheet" th:href="@{/css/displaysongs.css}">
+    <!-- Add the link to the icon library (Font Awesome in this case) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style type="text/css">
+    iframe {
+        height: 100px;
+        width: 500px;
+    }
+</style>
+<body>
+    <div class="container">
+        <table border="1" class="tbl">
+            <tr>
+                <td>ID</td>
+                <td>ARTIST</td>
+                <td>GENRE</td>
+                <td>LINK</td>
+                <td>NAME</td>
+            </tr>
+            <tr th:each="songs:${songs}">
+                <td th:text="${songs.id}"></td>
+                <td th:text="${songs.artist}"></td>
+                <td th:text="${songs.genre}"></td>
+                <td>
+                    <audio controls>
+                        <source th:src="${songs.link}" type="audio/mpeg" >
+                    </audio>
+                </td>
+                <td th:text="${songs.name}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Script to handle navigation -->
+    <script>
+        function showContent(contentType) {
+            console.log("Navigating to: " + contentType);
+
+            if (contentType === 'home') {
+                // Redirect to home page
+                window.location.href = '/home';
+            } else if (contentType === 'about') {
+                // Redirect to about page
+                window.location.href = '/about';
+            } else if (contentType === 'songs') {
+                // Stay on the current page (DisplaySongs)
+            } else if (contentType === 'playlist') {
+                // Redirect to playlist page
+                window.location.href = '/playlist';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>DisplaySongs</title>
+    <link rel="stylesheet" th:href="@{/css/displaysongs.css}">
+</head>
+<style type="text/css">
+    iframe {
+        height: 100px;
+        width: 500px;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showContent('home')">Home</a>
+        <a href="#" onclick="showContent('about')">About</a>
+        <a href="#" onclick="showContent('songs')">Songs</a>
+        <a href="#" onclick="showContent('playlist')">Playlist</a>
+    </div>
+
+    <div class="container">
+        <table border="1" class="tbl">
+            <tr>
+                <td>ID</td>
+                <td>ARTIST</td>
+                <td>GENRE</td>
+                <td>LINK</td>
+                <td>NAME</td>
+            </tr>
+            <tr th:each="songs:${songs}">
+                <td th:text="${songs.id}"></td>
+                <td th:text="${songs.artist}"></td>
+                <td th:text="${songs.genre}"></td>
+                <td>
+                    <audio controls>
+                        <source th:src="${songs.link}" type="audio/mpeg" controls>
+                    </audio>
+                </td>
+                <td th:text="${songs.name}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function showContent(contentType) {
+            console.log("Navigating to: " + contentType);
+
+            if (contentType === 'home') {
+                // Implement home navigation logic or redirect
+            } else if (contentType === 'about') {
+                // Implement about navigation logic or redirect
+            } else if (contentType === 'songs') {
+                // Implement songs navigation logic or redirect
+            } else if (contentType === 'playlist') {
+                // Implement playlist navigation logic or redirect
+            }
+        }
+    </script>
+</body>
+</html>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Write your comments here 
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
- <link rel="stylesheet" th:href="@{/css/displaySongs.css}">
+<title>DisplaySongs</title>
+ <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <style type="text/css">
 iframe{
@@ -11,7 +212,8 @@ width:500px;
 }
 </style>
 <body>
-	<table border="1">
+<div class="container">
+	<table border="1" class="tbl">
 		<tr>
 			<td>ID</td>
 			<td>ARTIST</td>
@@ -32,5 +234,7 @@ width:500px;
 			<td th:text="${songs.name}"></td>
 		</tr>
 	</table>
+	</div>
 </body>
 </html>
+-->

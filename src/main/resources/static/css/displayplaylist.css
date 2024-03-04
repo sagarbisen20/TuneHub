@@ -1,0 +1,47 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-image: url("whi.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+.tbl {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.tbl th, .tbl td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tbl th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tbl tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tbl tr:hover {
+    background-color: #f1f1f1;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+audio {
+    margin-top: 5px;
+}
+
+/* Add more styles as needed for a better design */

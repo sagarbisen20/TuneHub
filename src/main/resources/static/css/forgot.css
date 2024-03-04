@@ -1,47 +1,47 @@
-/* style.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-form {
+.container {
     max-width: 400px;
     margin: 50px auto;
-    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
+.txt {
     color: #333;
+}
+
+form {
+    margin-top: 20px;
 }
 
 input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
 }
 
-input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
+.btn {
+    background-color: #3498db;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+.btn:hover {
+    background-color: #2980b9;
 }

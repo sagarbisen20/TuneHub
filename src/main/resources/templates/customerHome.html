@@ -3,16 +3,45 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/customer.css}">
-
+<link rel="stylesheet" th:href="@{/css/customerhome.css}">
 </head>
 <body>
-	<h1>Customer home</h1>
-	<a href="pay">Get Premium</a>
-	<br>
-	
-	<a href="logout">LogOut</a>
-	<br>
-	
+	<div class="container">
+		<h1 class="hdn">Customer home</h1>
+		<div th:unless="${isPremium}" class="non-premium">
+			<a href="pay">Get Premium</a> <br> <a href="logout">LogOut</a> <br>
+		</div>
+
+		<div th:if="${isPremium}" class="premium">
+			<table border="1" class="tbl">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Artist</th>
+						<th>Genre</th>
+						<th>Play</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr th:each="songs:${songs}">
+						<td th:text="${songs.id}"></td>
+						<td th:text="${songs.artist}"></td>
+						<td th:text="${songs.genre}"></td>
+						<td>
+				<td>
+				<ul>
+					<li th:each="songs :${plist.songs}"><span
+						th:text=${songs.name}></span> <audio controls>
+							<source th:src="${songs.link}" type="audio/mpeg">
+						</audio></li>
+				</ul>
+			<td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
 </body>
 </html>
